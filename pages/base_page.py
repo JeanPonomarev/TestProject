@@ -1,6 +1,6 @@
-class BasePage():
+class BasePage:
     # конструктор
-    def ___init__(self, browser, url):
+    def __init__(self, browser, url):
         self.browser = browser
         self.url = url
 
