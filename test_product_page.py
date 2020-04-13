@@ -26,7 +26,7 @@ def test_guest_can_add_product_to_basket(browser, link):
     product_page.add_product_to_basket()
     product_page.solve_quiz_and_get_code()
 
-    # time.sleep(5)
+    time.sleep(240)
 
     product_page.should_be_correct_product_name(initial_product_name)
     product_page.should_be_correct_price(initial_product_price)

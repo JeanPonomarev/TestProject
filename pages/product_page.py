@@ -25,3 +25,10 @@ class ProductPage(BasePage):
         product_price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE)
         product_price_text = product_price.text
         return product_price_text
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(
+            *ProductPageLocators.PRODUCT_NAME_AFTER_ADDING), "Success message is presented, but should not be"
+
+    def element_should_disappear(self):
+        assert self.is_disappeared(*ProductPageLocators.PRODUCT_NAME_AFTER_ADDING), "Element did not disappear"
