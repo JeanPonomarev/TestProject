@@ -16,6 +16,14 @@ def pytest_addoption(parser):
                      default='ru',
                      help="Choose language: ru, en, ... (etc.)")
 
+    # parser.addoption('--product-name',
+    #                  action='store',
+    #                  help='Choose product name (book title)')
+    #
+    # parser.addoption('--product-price',
+    #                  action='store',
+    #                  help='Choose product price like 99,99 $')
+
 
 @pytest.fixture(scope="function")
 def browser(request):
@@ -45,3 +53,15 @@ def browser(request):
 
     print("\nquit browser..")
     browser.quit()
+
+
+# @pytest.fixture(scope="function")
+# def product_name(request):
+#     product_name = request.config.getoption("product_name")
+#     yield product_name
+#
+#
+# @pytest.fixture(scope="function")
+# def product_price(request):
+#     product_price = request.config.getoption("product_price")
+#     yield product_price
