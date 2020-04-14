@@ -1,8 +1,14 @@
 from selenium.webdriver.common.by import By
 
 
-class BasePageLocators():
+class BasePageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    BASKET_LINK = (By.CSS_SELECTOR, ".btn-group>.btn.btn-default:nth-child(1)")
+
+
+class BasketPageLocators:
+    ANY_PRODUCTS = (By.CLASS_NAME, "basket-items")
+    EMPTY_BASKET_MESSAGE = (By.CSS_SELECTOR, "#content_inner>p")
 
 
 class LoginPageLocators:
