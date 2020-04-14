@@ -13,7 +13,7 @@ def pytest_addoption(parser):
     # Добавляем возможность задать язык браузера при запуске тестов из консоли
     parser.addoption('--language',
                      action='store',
-                     default='ru',
+                     default='en',
                      help="Choose language: ru, en, ... (etc.)")
 
     # parser.addoption('--product-name',

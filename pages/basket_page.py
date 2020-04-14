@@ -8,4 +8,5 @@ class BasketPage(BasePage):
             *BasketPageLocators.ANY_PRODUCTS), "There are some items in the basket without customer's choice"
 
     def should_be_empty_basket_text(self):
-        assert self.is_element_present(*BasketPageLocators.EMPTY_BASKET_MESSAGE), "The empty basket message is absent"
+        basket_message = self.browser.find_element(*BasketPageLocators.EMPTY_BASKET_MESSAGE).text
+        assert "Your basket is empty" in basket_message, "Something wrong with empty basket message"
